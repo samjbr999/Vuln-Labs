@@ -1,21 +1,36 @@
-# Lab Report: [Lab Name]
+# Lab Report: OWASP Top 10 – Broken Access Control
 
 ## Summary of the Target
-Short description of the lab (e.g., vulnerable web app, target IP, scenario).
-
-## Exploitation Steps
-1. Step 1 – Reconnaissance (tools/commands used, screenshots).
-2. Step 2 – Exploit (describe what you did and why).
-3. Step 3 – Privilege Escalation (if applicable).
-
-## Findings with Screenshots
-- Found [Vulnerability Name] (e.g., Broken Access Control / Command Injection).
-- Impact: [e.g., full account takeover, remote command execution].
-- Add screenshots here.
-
-## Remediation Advice
-- Fix access control checks by enforcing role-based access.
-- Validate & sanitize user input.
-- Implement strong authentication and logging.
+The lab simulates a vulnerable web application with weak access control mechanisms.  
+The goal is to demonstrate how attackers can access unauthorized data.
 
 ---
+
+## Exploitation Steps
+1. **Reconnaissance**  
+   - Identified endpoints and tested for unauthorized access.  
+
+2. **Exploit**  
+   - Directly accessed restricted content by modifying the URL.  
+   - No authentication check was enforced.  
+
+3. **Privilege Escalation**  
+   - Gained access to sensitive user information without proper authorization.  
+
+---
+
+## Findings with Screenshots
+- **Vulnerability:** Broken Access Control (IDOR – Insecure Direct Object Reference)  
+- **Impact:** Unauthorized users can access sensitive data without authentication.  
+
+### Screenshot:
+![](broken-access-control.PNG)
+
+---
+
+## Remediation Advice
+- Enforce strict role-based access controls.  
+- Validate session tokens on every request.  
+- Implement least privilege principle.  
+- Conduct regular access control testing.  
+
