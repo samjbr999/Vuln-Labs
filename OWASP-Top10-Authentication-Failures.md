@@ -13,7 +13,7 @@ This lab highlights flaws in authentication mechanisms, such as weak passwords, 
 - Predictable session cookie values.  
 - **Impact:** Unauthorized access to sensitive accounts.  
 
-![Authentication Screenshot](auth-failures.png)
+![Authentication Screenshot]("Identification and Authentication Failures.PNG")
 
 ## Remediation Advice
 - Enforce strong password policies and complexity requirements.  
